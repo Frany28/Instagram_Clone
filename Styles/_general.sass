@@ -1,0 +1,41 @@
+/*Variables*/
+$background-color:#100a0a
+
+$font-family: "Fira Sans", sans-serif
+$font-size: 16px
+$text-color: #FFFF
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-boss
+
+body
+  color: nth($text-color,1)
+  font-family: $font-family
+  background-color: nth($background-color,1)
+  font-size: $font-size
+
+
+@mixin displays($display: flex , $justify:center , $aling:center, $direction:row,$columns-number:1fr)
+  @if $display==flex
+    display: $display
+    justify-content: $justify
+    align-items: $aling
+    flex-direction: $direction
+  @else if $display==grid
+    display: grid
+    grid-template-columns: $columns-number
+    align-items: $aling
+    justify-content: $justify  
+    
+
+
+// Mixin para Media Queries (Mobile First)
+@mixin respond-to($breakpoint)
+  @if $breakpoint == mobile
+    @media (max-width: 768px)
+      @content
+  @else if $breakpoint == tablet
+    @media (max-width: 1024px)
+      @content
