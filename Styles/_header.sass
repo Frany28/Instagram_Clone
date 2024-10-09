@@ -1,14 +1,53 @@
-nav
-  @include flex-center(space-between, center)
-  padding: 1rem
-  background-color: #fafafa
-  border-bottom: 1px solid #dbdbdb
+@import "./_general.sass"
 
-  .logo
-    @include font-style(1.5rem, bold)
+nav
+  @include displays(flex, center, center, column)
+  border-bottom: 1px solid #dbdbdbc5
+  position: fixed
+  top: 0 
+  width: 100%
+  background-color: nth($background-color,1)
+  z-index: 3
+  transition: background-color 0.3s ease
+  flex-shrink: 0
+  padding: 15px 5px
+
+
+.navbar
+  @include displays(flex, center, center, row)
+  padding: 0 20px
+  max-width: calc(935px + 40px)
+  width: 100%
+  z-index: 10
+
+.logo
+  flex: 1 0 127px
+
+.login
+  @include displays(flex, flex-end, center, row)
+  align-content: center
+  flex: 1 0 127px
+  position: relative
+
 
   .login-btn, .signup-btn
-    background: none
-    border: none
-    @include font-style(1rem, normal, #0095f6)
     cursor: pointer
+    color: nth($text-color,1)
+    padding: 0.4rem 1rem
+    $font-size: nth($font-size,1)
+
+.login-btn
+  background-color: #2b8ee4
+  border: none
+  padding: 0.5rem 1rem
+  border-radius: 6px
+  transition: background-color 0.3s ease
+  &:hover
+    background-color: #0e6dbf
+
+.signup-btn
+  background-color: transparent
+  border: none
+  transition: background-color 0.3s ease
+  &:hover
+    color: #0e6dbf

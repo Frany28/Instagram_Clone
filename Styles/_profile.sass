@@ -1,0 +1,98 @@
+@import './_general.sass'
+
+.profile-section  
+  padding: 2rem
+  @include displays(flex, center, center, column) 
+
+.profile-info
+  @include displays(flex, center, center, row) 
+  gap: 2rem
+
+  .profile-header 
+    @include displays(flex, flex-start, center, row)
+    gap: 1.5rem
+    margin-bottom: 2rem
+
+  .profile-img 
+    max-width: 130px
+    max-height: 130px
+    border-radius: 50%
+    border: 2px solid #dbdbdb
+
+.info
+  @include displays(flex, flex-start, center, column)
+
+.buttons
+  padding: 1rem 1rem
+  gap: 1rem
+
+.info-top
+  @include displays(flex, flex-start, center, row)
+  width: 100%
+
+.buttons > button
+  padding: 0.4rem 1.5rem
+  background-color: #3b3c3d
+  border: none
+  border-radius: 5px
+  @include font-style(0.8rem)
+  cursor: pointer
+  transition: background-color 0.3s ease
+  &:hover
+    background-color: #212020
+
+.profile-info 
+  .username 
+    @include font-style(1.8rem, 600)
+
+.profile-stats 
+  margin: 1rem 0
+  @include displays(flex, flex-start, start, row)
+  gap: 1.5rem
+  width: 100%
+      
+.profile-bio 
+  @include font-style(1rem, normal, #8e8e8e) 
+
+a 
+  color: #0095f6
+  text-decoration: none
+
+.profile-mob
+  display: none
+
+// Media Queries para móviles
+@include respond-to(mobile) 
+  .profile-mob
+    padding: 0.5rem 0.5rem
+    display: block
+    .profile-bio 
+    @include font-style(0.8rem, normal, #8e8e8e) 
+    width: 100%
+  .profile-header
+    width: 100%
+  .profile-bio
+    display: none
+  .profile-stats
+    display: none // Asegúrate de que esta propiedad esté indentada correctamente
+
+  .buttons
+    padding: 0.8rem 0.1rem
+  .info-top
+    @include displays(flex, flex-start, baseline, column)
+
+  .profile-section  
+    padding: 5px 10px
+    @include displays(flex, center, center, column) 
+
+  .profile-img 
+    width: 70px
+    height: 70px
+
+
+  .profile-info 
+    @include displays(flex, flex-start, center, row)
+    padding-bottom: 0.5rem
+
+  .username 
+    @include font-style(1.4rem, 600)
