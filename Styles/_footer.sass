@@ -1,0 +1,38 @@
+@import './_general.sass'
+
+.footer
+  @include displays(flex, center, space-between, row) // Fila en pantallas grandes
+  padding-bottom: 40px
+  gap: 1rem
+  flex-wrap: wrap // Permitir que los elementos se acomoden en varias filas en pantallas pequeñas
+  @include font-style(0.8rem, 400, gray)
+  width: 100%
+
+  .footer-links,
+  .footer-languages
+    display: flex
+    flex-wrap: wrap // Distribuir los elementos en varias filas si es necesario
+    gap: 1rem
+
+  .footer-links
+    width: 100% // Ocupa toda la fila en pantallas pequeñas
+    justify-content: center
+
+  .footer-languages
+    width: 100% // Ocupa toda la fila debajo de los enlaces
+    justify-content: center
+
+  @include respond-to(mobile)
+    flex-direction: column // En pantallas pequeñas, apila los elementos verticalmente
+    align-items: center
+
+    .footer-links,
+    .footer-languages
+      justify-content: center
+      width: 100%
+
+.footer a
+  color: gray
+  text-decoration: none
+  &:hover
+    text-decoration: underline

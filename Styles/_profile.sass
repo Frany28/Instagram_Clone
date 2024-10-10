@@ -50,9 +50,21 @@
   @include displays(flex, flex-start, start, row)
   gap: 1.5rem
   width: 100%
+
+.profile-stats > button
+    border: none
+    @include font-style(1rem)
+    background-color: transparent
+    cursor: pointer
+    transition: color 0.3s ease
+    &:hover
+      color: #8d9092
+
       
 .profile-bio 
   @include font-style(1rem, normal, #8e8e8e) 
+.profile-bio > h3
+  @include font-style(1rem, 600, #fff)
 
 a 
   color: #0095f6
@@ -66,9 +78,10 @@ a
   .profile-mob
     padding: 0.5rem 0.5rem
     display: block
-    .profile-bio 
-    @include font-style(0.8rem, normal, #8e8e8e) 
+    @include font-style(3vw, normal, #8e8e8e) 
     width: 100%
+  .profile-mob > h3
+    @include font-style(3vw, 600,#fff)
   .profile-header
     width: 100%
   .profile-bio
@@ -86,8 +99,8 @@ a
     @include displays(flex, center, center, column) 
 
   .profile-img 
-    width: 70px
-    height: 70px
+    width: 14vw
+    height: 14vw
 
 
   .profile-info 
@@ -95,4 +108,4 @@ a
     padding-bottom: 0.5rem
 
   .username 
-    @include font-style(1.4rem, 600)
+    @include font-style(3vw, 600)

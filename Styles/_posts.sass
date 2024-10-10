@@ -1,0 +1,57 @@
+@import './_general.sass'
+
+/* Estilos para la sección de publicaciones */
+.posts-section
+  @include displays(grid, center, center)
+  padding: 20px
+  max-width: 1200px // Puedes ajustar el ancho máximo
+  margin: 0 auto // Centrar la sección
+
+.postsGrid
+  @include displays(grid, center, center)
+  grid-template-columns: repeat(3, 1fr) // Tres columnas
+  gap: 10px
+
+.post
+  position: relative // Necesario para posicionar los íconos dentro del contenedor de la imagen
+
+  img
+    width: 100% // Para que la imagen ocupe el ancho del contenedor
+    height: auto // Mantener la proporción
+    border-radius: 5px // Opcional: añadir esquinas redondeadas
+    transition: opacity 0.3s ease-in-out // Añadir transición para el efecto de hover
+
+  // Contenedor de los íconos
+  .icons
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) // Centrar los íconos en la imagen
+    display: flex
+    gap: 10px // Separación entre los iconos
+    opacity: 0 // Inicialmente oculto
+    transition: opacity 0.3s ease-in-out // Efecto de transición al aparecer
+
+    i // Estilos para los íconos
+      font-size: 20px
+      color: white // Ajusta según el estilo deseado
+
+  // Mostrar los íconos y cambiar la opacidad de la imagen al hacer hover en el contenedor .post
+  &:hover
+    .icons
+      opacity: 1 // Los íconos aparecen al hacer hover
+    img
+      opacity: 0.8 // La imagen se vuelve más oscura al hacer hover
+
+// Media Queries para pantallas más pequeñas
+@include respond-to(mobile)
+  .posts-section
+    .postsGrid
+      grid-template-columns: repeat(2, 1fr) // Dos columnas en dispositivos móviles
+    .post .icons i
+    font-size: 10px
+  
+@include respond-to(tablet)
+  .posts-section
+    .postsGrid
+      grid-template-columns: repeat(3, 1fr) // Tres columnas en tabletas

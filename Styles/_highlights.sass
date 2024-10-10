@@ -1,9 +1,10 @@
 .highlights 
-  @include displays(flex, space-between, center, row) 
-  gap: 1.5rem // Ajustar el espacio entre imágenes
+  @include displays(flex, center, center, row) 
+  gap: 3rem // Ajustar el espacio entre imágenes
   margin-top: 1rem
   flex-wrap: nowrap // Para evitar que se muevan a otra línea
-  
+  padding-top: 40px
+  width: 100%
 
   .highlight 
     @include displays(flex, center, center, column)
@@ -24,7 +25,8 @@
 // Media Queries para pantallas más pequeñas
 @include respond-to(mobile) 
   .highlights 
-    gap: 1rem // Reducir el espacio entre imágenes en pantallas pequeñas
+    @include displays(flex, space-between, center, row)
+    gap: 0.7rem // Reducir el espacio entre imágenes en pantallas pequeñas
     margin-top: 0.2rem
     width: 100%
     img 
