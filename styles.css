@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-boss;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -85,6 +88,9 @@ nav {
   margin: 0;
   padding: 0;
   box-sizing: border-boss;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -322,6 +328,9 @@ a {
   margin: 0;
   padding: 0;
   box-sizing: border-boss;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -353,7 +362,6 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #0122e1;
 }
 
 .tab > svg, .active > svg {
@@ -411,6 +419,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-boss;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -490,6 +501,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-boss;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -618,6 +632,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-boss;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
