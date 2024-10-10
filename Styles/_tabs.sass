@@ -35,7 +35,7 @@
     display: none
   
   .tab > svg, .active > svg
-    width: 30px// Tamaño del ícono SVG
+    width: 30px
     height: 24px
 
   .tabs > button
@@ -44,12 +44,12 @@
   .profile-statsmob
     border-top: 1px solid #dbdbdb
     padding: 2rem
-    @include displays(flex, space-between, center, row) // Alinear en ambos ejes
-    text-align: center // Asegurar que el texto dentro del contenedor esté centrado
+    @include displays(flex, space-between, center, row)
+    text-align: center 
 
   .infomob
     @include font-style(0.8rem)
-    text-align: center // Centrar el texto dentro de este contenedor
+    text-align: center
     transition: color 0.3s ease
     cursor: pointer
     & :hover
